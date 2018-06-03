@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './styles/styles.css';
 
 class NavBar extends Component {
+  handleRedirect = route => {
+    this.props.router.history.push(route);
+  };
   render() {
     return (
       <div className="NavBar">
@@ -18,14 +21,11 @@ class NavBar extends Component {
               </div>
               <ul class="nav navbar-nav">
                 <li>
-                  <a class="" href="http://frontrangedents.com/">
-                    {' '}
-                    Home
-                  </a>
+                  <a onClick={() => this.handleRedirect('/')}> Home</a>
                   <ul />
                 </li>
                 <li>
-                  <a class="" href="http://frontrangedents.com/about-us/">
+                  <a onClick={() => this.handleRedirect('/about-us')}>
                     {' '}
                     About us
                   </a>
@@ -108,30 +108,7 @@ class NavBar extends Component {
                     </li>
                   </ul>
                 </li>
-                <li>
-                  <ul />
-                </li>
-                <li>
-                  <ul />
-                </li>
-                <li>
-                  <ul />
-                </li>
-                <li>
-                  <ul />
-                </li>
-                <li>
-                  <ul />
-                </li>
-                <li>
-                  <ul />
-                </li>
-                <li>
-                  <ul />
-                </li>
-                <li>
-                  <ul />
-                </li>
+
                 <li>
                   <a class="" href="http://frontrangedents.com/testimonials/">
                     {' '}
@@ -191,151 +168,6 @@ class NavBar extends Component {
                 <span class="icon-bar" />
                 <span class="icon-bar" />
               </button>
-              <ul
-                class="mobile-menu"
-                id="mobile-menu-top"
-                data-dropdown-in="fadeIn"
-                data-dropdown-out="fadeOut"
-              >
-                <li>
-                  <a class="" href="http://frontrangedents.com/">
-                    {' '}
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a class="" href="http://frontrangedents.com/about-us/">
-                    {' '}
-                    About us
-                  </a>
-                </li>
-                <li>
-                  <a class="" href="http://frontrangedents.com/services/">
-                    {' '}
-                    Services
-                  </a>
-                  <ul>
-                    <li>
-                      <a
-                        class="menu-small "
-                        href="http://frontrangedents.com/interior-details/"
-                      >
-                        {' '}
-                        Interior Details
-                      </a>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <a
-                        class="menu-small "
-                        href="http://frontrangedents.com/headlight-restoration/"
-                      >
-                        {' '}
-                        Headlight Restoration
-                      </a>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <a
-                        class="menu-small "
-                        href="http://frontrangedents.com/clear-bra/"
-                      >
-                        {' '}
-                        Clear Bra
-                      </a>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <a
-                        class="menu-small "
-                        href="http://frontrangedents.com/door-dent-removal/"
-                      >
-                        {' '}
-                        Door Dents
-                      </a>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <a
-                        class="menu-small "
-                        href="http://frontrangedents.com/hail-damage/"
-                      >
-                        {' '}
-                        HAIL DAMAGE
-                      </a>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <a
-                        class="menu-small "
-                        href="http://frontrangedents.com/small-large-dents/"
-                      >
-                        {' '}
-                        Small &amp; Large Dents
-                      </a>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <a
-                        class="menu-small "
-                        href="http://frontrangedents.com/collision-repair/"
-                      >
-                        {' '}
-                        Collision Damage
-                      </a>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <a
-                        class="menu-small "
-                        href="http://frontrangedents.com/window-tint/"
-                      >
-                        {' '}
-                        Window Tint
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li />
-                <li />
-                <li />
-                <li />
-                <li />
-                <li />
-                <li />
-                <li />
-                <li>
-                  <a class="" href="http://frontrangedents.com/testimonials/">
-                    {' '}
-                    Our Work
-                  </a>
-                </li>
-                <li>
-                  <a class="" href="http://frontrangedents.com/blog">
-                    {' '}
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a class="" href="http://frontrangedents.com/estimates/">
-                    {' '}
-                    Estimates
-                  </a>
-                </li>
-                <li>
-                  <a class="" href="http://frontrangedents.com/contact-us/">
-                    {' '}
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
             </nav>
           </div>
         </header>
